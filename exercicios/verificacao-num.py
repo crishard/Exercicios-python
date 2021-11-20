@@ -16,6 +16,8 @@ operacao = input('Qual operação deseja realizar: + [adição], - [subtração]
 def result(num1, num2):
     #verificando se a operação selecionada é válida
     if operacao in operacoes:
+
+        #realizando a operação escolhida pelo usuário
         if operacao == '+':
             res = num1 + num2
 
@@ -30,19 +32,24 @@ def result(num1, num2):
                 print('Para realizar uma divisão, seu denominador não pode ser maior que o numerador')
             else:
                 res = num1 / num2
+
+    #caso a operação escolhida não seja válida
     else:
         print('Por favor, escolha uma operação válida')
 
+    #verificando se o resultado é positivo ou negativo
     if res < 0:
         pn = 'Negativo'
     else:
         pn = 'Positivo'
 
+    #verificando se o valor é par ou impar
     if res % 2 == 0:
         pi = 'par'
     else:
         pi = 'ímpar'
-
+        
+    #verificando se o valor é um inteiro ou um decimal 
     if res // 1 == res:
         di = 'interio'
     else:
