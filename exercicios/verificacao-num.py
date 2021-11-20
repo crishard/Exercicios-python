@@ -4,12 +4,17 @@
     positivo ou negativo;
     inteiro ou decimal.
 """
+#coletando valores
 num1 = float(input('Insira um valor qualquer: '))
 num2 = float(input('Insira um outro valor qualquer: '))
 
+#criando uma lista de possíveis operações e coletando a operação
 operacoes = ['+', '-', '*', '/']
 operacao = input('Qual operação deseja realizar: + [adição], - [subtração], * [multiplicação] ou / [divisão]')
+
+#função para realizar a operação e verificar os resultados
 def result(num1, num2):
+    #verificando se a operação selecionada é válida
     if operacao in operacoes:
         if operacao == '+':
             res = num1 + num2
@@ -43,6 +48,8 @@ def result(num1, num2):
     else:
         di = 'decimal'
 
+    #imprimindo o resultado pedido
     print(f'O seu resultado é {res}, seu numero é {pn}, {pi} e {di}')
 
+#chamando a função
 result(num1, num2)
